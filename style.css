@@ -47,3 +47,9 @@ body {
 .tictactoe tr .cell:last-child {
     border-right: none;
 }
+
+.winning-line {
+    position: absolute;
+    height: 5px;
+    background-color: #ffffff;
+}
