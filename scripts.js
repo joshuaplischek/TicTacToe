@@ -106,6 +106,21 @@ function drawWinningLine(winner) {
     document.body.appendChild(line);
 }
 
+function restart(){
+    fields = [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+    ];
+
+    render();
+}
 
 function generateCircleSVG() {
     return `
