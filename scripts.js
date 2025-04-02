@@ -7,17 +7,13 @@ function render() {
     content.innerHTML = '';
     
     let table = document.createElement('table');
-    table.style.borderCollapse = 'collapse';
-    
+    table.classList.add('tictactoe');
+
     for (let i = 0; i < 3; i++) {
         let row = document.createElement('tr');
         for (let j = 0; j < 3; j++) {
             let cell = document.createElement('td');
-            cell.style.width = '50px';
-            cell.style.height = '50px';
-            cell.style.border = '1px solid black';
-            cell.style.textAlign = 'center';
-            cell.style.fontSize = '24px';
+            cell.classList.add('cell');
             
             let index = i * 3 + j;
             if (fields[index] === 'circle') {
@@ -33,5 +29,3 @@ function render() {
     
     content.appendChild(table);
 }
-
-

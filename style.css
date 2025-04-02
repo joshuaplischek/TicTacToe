@@ -1,0 +1,33 @@
+body {
+    background-color: #323232;
+}
+
+.tictactoe {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: 5px solid white;
+}
+
+/* Entfernt äußere Ränder */
+.tictactoe tr:first-child .cell {
+    border-top: none;
+}
+
+.tictactoe tr:last-child .cell {
+    border-bottom: none;
+}
+
+.tictactoe tr .cell:first-child {
+    border-left: none;
+}
+
+.tictactoe tr .cell:last-child {
+    border-right: none;
+}
