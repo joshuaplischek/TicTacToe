@@ -2,6 +2,8 @@ function init() {
     render();
 }
 
+let currentPlayer = 'circle'; 
+
 function render() {
     let content = document.getElementById('content');
     content.innerHTML = '';
@@ -21,6 +23,10 @@ function render() {
             } else if (fields[index] === 'cross') {
                 cell.innerHTML = generateCrossSVG();
             }
+
+            cell.onclick = function() {
+                handleClick(index, cell);
+            };
             
             row.appendChild(cell);
         }
@@ -28,6 +34,21 @@ function render() {
     }
     
     content.appendChild(table);
+}
+
+function handleClick(index, cell) {
+    if (fields[index] === null) {
+        fields[index] = currentPlayer; 
+        if (currentPlayer === 'circle') {
+            cell.innerHTML = generateCircleSVG();
+            currentPlayer = 'cross';  
+        } else {
+            cell.innerHTML = generateCrossSVG();
+            currentPlayer = 'circle';  
+        }
+
+        cell.onclick = null;
+    }
 }
 
 function generateCircleSVG() {
