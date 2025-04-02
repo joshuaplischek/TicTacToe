@@ -26,6 +26,11 @@ body {
     border-radius: 10px;
 }
 
+.cell:hover{
+    background-color: rgba(255, 255, 255, 0.056);
+    cursor: pointer;
+}
+
 /* Entfernt äußere Ränder */
 .tictactoe tr:first-child .cell {
     border-top: none;
